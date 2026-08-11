@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>BE-TFC</AssemblyName>
+    <RootNamespace>BETFC</RootNamespace>
+    <Version>1.4.3</Version>
+    <Company>BE AI Research Group</Company>
+    <Product>BE-TFC Temp File Cleaner</Product>
+    <!-- Shows as the file description in Explorer, Task Manager and the UAC
+         prompt — the tech and the client both read this before consenting. -->
+    <AssemblyTitle>BE-TFC Temp File Cleaner</AssemblyTitle>
+    <Description>Modern successor to OldTimer's TFC for Windows 11 bench work</Description>
+    <Copyright>Copyright (C) 2026 Brown Enterprises</Copyright>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+
+    <!-- Portable single-file publish (default, reliable) -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <!--
+      Override per publish:  dotnet publish -c Release -p:TargetArch=win-arm64
+      Windows 11 on ARM (Snapdragon X and friends) turns up on the bench now.
+      An x64 build runs there under emulation, but this is a filesystem walker
+      and emulation costs real time on a large scan. tools/publish-all.ps1
+      emits both.
+    -->
+    <TargetArch Condition="'$(TargetArch)' == ''">win-x64</TargetArch>
+    <RuntimeIdentifier>$(TargetArch)</RuntimeIdentifier>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+
+    <!--
+      EXPERIMENTAL: NativeAOT (~20MB exe instead of ~90MB).
+      Publish with:  dotnet publish -c Release -p:UseAot=true
+      If the AOT build misbehaves (WinForms AOT is experimental),
+      fall back to the default self-contained publish.
+    -->
+    <PublishAot Condition="'$(UseAot)' == 'true'">true</PublishAot>
+    <_SuppressWinFormsTrimError Condition="'$(UseAot)' == 'true'">true</_SuppressWinFormsTrimError>
+  </PropertyGroup>
+
+</Project>

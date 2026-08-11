@@ -1,0 +1,48 @@
+## .NET build output
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Publish output (users grab BE-TFC.exe from the release, not from the tree)
+publish/
+*.pdb
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Test output
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+coverage*.xml
+coverage*.json
+*.coverage
+*.coveragexml
+
+## Prebuilt exe at repo root — this is a *developer* convenience during local
+## testing (see the README's build section). Not committed to the repo; the
+## GitHub release attaches the freshly-published BE-TFC.exe as an artifact.
+/BE-TFC.exe
+/BE-TFC.exe.old
+/help-output.txt
+
+## OS cruft
+Thumbs.db
+Desktop.ini
+.DS_Store

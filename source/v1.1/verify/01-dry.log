@@ -1,0 +1,40 @@
+
+===== BE-TFC 1.4.1 (x64) — 2026-08-10 18:24:43 on SHAYNE-DSKTP =====
+BE-TFC 1.4.1 (x64) — silent mode (Dry)
+────────────────────────────────────────────────────────────
+Categories: win-temp, wu-cache, delivery-opt, wer, user-temp, inetcache, thumbcache, crashdumps, java-cache, chromium-cache, firefox-cache, electron-cache, shader-cache, winget-cache
+Scanning...
+  Profiles: shayn, WsiAccount
+Scan complete in 22.1s: 6.64 GB in 94,242 files.
+       3.71 GB     1,117  User Temp folders (all profiles)
+       1.11 GB    90,727  Windows Update download cache
+       1.01 GB       116  GPU shader caches (NVIDIA/AMD/DirectX)
+      622.2 MB        17  Windows Temp
+        196 MB     2,178  Chromium browsers cache (Chrome/Edge/Brave/Vivaldi/Opera)
+       18.1 MB        60  Thumbnail & icon caches
+        2.4 MB         4  User crash dumps
+        187 KB        22  INetCache / IE-WebView cache
+         33 KB         1  Windows Error Reporting queue
+           0 B         0  Delivery Optimization cache
+           0 B         0  Java deployment cache
+           0 B         0  Firefox cache
+           0 B         0  Electron app caches (Teams/Discord/Slack/Spotify)
+           0 B         0  WinGet installer cache
+Cleaning (Dry)...
+── [dry] Windows Temp
+── [dry] Windows Update download cache
+── [dry] Delivery Optimization cache
+── [dry] Windows Error Reporting queue
+── [dry] User Temp folders (all profiles)
+── [dry] INetCache / IE-WebView cache
+── [dry] Thumbnail & icon caches
+── [dry] User crash dumps
+── [dry] Java deployment cache
+── [dry] Chromium browsers cache (Chrome/Edge/Brave/Vivaldi/Opera)
+── [dry] Firefox cache
+── [dry] Electron app caches (Teams/Discord/Slack/Spotify)
+── [dry] GPU shader caches (NVIDIA/AMD/DirectX)
+── [dry] WinGet installer cache
+── [dry] Done. 6.64 GB (dry run — nothing was changed), 94242 files would remove, 0 scheduled for reboot, 0 errors.
+Report: 6.64 GB cleaned, 94242 files removed, 0 scheduled for reboot, 0 errors.
+Disk: C: 12.1 GB → 12.11 GB free (+8.8 MB)   |   G: 11.49 GB → 11.5 GB free (+8.4 MB)
